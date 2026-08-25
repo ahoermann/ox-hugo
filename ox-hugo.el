@@ -2778,9 +2778,9 @@ and rewrite link paths to make blogging more seamless."
           ;; External file.
           (`plain-text
            (let ((path (progn
-                         ;; Treat links to `file.org' as links to `file.md'.
+                         ;; Treat links to `file.org' as links to `file'.
                          (if (string= ".org" (downcase (file-name-extension destination ".")))
-                             (concat (file-name-sans-extension destination) ".md")
+                             (file-name-sans-extension destination)
                            destination))))
              ;; (message "[org-hugo-link DBG] plain-text path: %s" path)
              (if (org-id-find-id-file raw-path)
