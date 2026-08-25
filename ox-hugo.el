@@ -4319,7 +4319,7 @@ are \"toml\" and \"yaml\"."
   (if (string= format "yaml")
       (org-hugo--gen-yaml-front-matter data)
     (let ((tomelr-indent-multi-line-strings t))
-      (format "+++\n%s\n+++\n" (tomelr-encode data)))))
+      (format "---\n%s\n---\n" (tomelr-encode data)))))
 
 (defun org-hugo--selective-property-inheritance ()
   "Return a list of properties that should be inherited."
