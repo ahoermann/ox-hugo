@@ -2793,7 +2793,7 @@ and rewrite link paths to make blogging more seamless."
                                  anchor
                                (concat path anchor))))
                    ;; (message "[org-hugo-link DBG] plain-text org-id anchor: %S" anchor)
-                   (format "[%s]({{< relref \"%s\" >}})" (or desc path) ref))
+                   (format "[%s](\"%s\")" (or desc path) ref))
                (if desc
                    (format "[%s](%s)" desc path)
                  (format "<%s>" path)))))
